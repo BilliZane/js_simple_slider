@@ -1,0 +1,20 @@
+{
+  "name": "src",
+  "version": "1.0.0",
+  "description": "",
+  "main": "script.js",
+  "scripts": {
+    "start": "parcel src/index.html",
+    "build": "parcel build src/index.html --public-url ./",
+    "deploy": "gh-pages -d dist"
+  },
+  "homepage": "https://BilliZane.github.io/js_simple_slider",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "gh-pages": "^3.2.3",
+    "parcel-bundler": "^1.12.5",
+    "sass": "^1.42.1"
+  }
+}

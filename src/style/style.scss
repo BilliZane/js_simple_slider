@@ -1,0 +1,138 @@
+// vars
+$widthOfImage: 370px;
+$heightOfImage: 510px;
+$slidesSpeed: 2s;
+$navsColor: #c4c4c4;
+$navsHover: 0.4s;
+
+@font-face {
+  font-family: "OpensansCondensedBold-700";
+  src: url("../fonts/OpensansCondensedBold-700.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #252525;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 30px;
+}
+
+.slider {
+  display: flex;
+  margin: 0 auto;
+  width: $widthOfImage;
+  flex-direction: column;
+  align-items: center;
+
+  &__inner {
+    width: $widthOfImage;
+    height: $heightOfImage;
+    margin: 0 auto;
+    overflow: hidden;
+  }
+
+  &__line {
+    height: $heightOfImage;
+    width: calc(#{$widthOfImage} * 4);
+    display: flex;
+
+    position: relative;
+    left: 0;
+
+    transition: left $slidesSpeed;
+  }
+
+  &__navs {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 35px;
+  }
+
+  &__nav {
+    font-family: "OpensansCondensedBold-700";
+    font-size: 18px;
+    letter-spacing: 0.1em;
+    color: $navsColor;
+    text-transform: uppercase;
+
+    background-color: transparent;
+    outline: none;
+    border: none;
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    &-prev {
+      transition: color $navsHover;
+    }
+
+    &-prev:hover {
+      color: #fff;
+    }
+
+    &-prev::before {
+      content: '';
+      display: inline-block;
+      width: 40px;
+      height: 16px;
+
+      background: url(../images/arrows/prev.svg);
+      background-position: center;
+      background-size: contain;
+      background-repeat: no-repeat;
+
+      margin-right: 25px;
+
+      transition: background $navsHover;
+    }
+
+    &-prev:hover::before {
+      background: url(../images/arrows/prev-active.svg);
+      background-position: center;
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+
+    &-next {
+      transition: color $navsHover;
+    }
+
+    &-next:hover {
+      color: #fff;
+    }
+
+    &-next::after {
+      content: '';
+      display: inline-block;
+      width: 40px;
+      height: 16px;
+
+      background: url(../images/arrows/next.svg);
+      background-position: center;
+      background-size: contain;
+      background-repeat: no-repeat;
+
+      margin-left: 25px;
+
+      transition: background $navsHover;
+    }
+
+    &-next:hover::after {
+      background: url(../images/arrows/next-active.svg);
+      background-position: center;
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+  }
+}
