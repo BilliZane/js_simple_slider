@@ -69,15 +69,15 @@ body {
   display: inline-block;
   width: 40px;
   height: 16px;
-  background: url(/prev.db59fb32.png);
+  background: url(/prev.dbbe99ba.svg);
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
   margin-right: 25px;
-  transition: background 400ms;
+  transition: background 0.4s;
 }
 .slider__nav-prev:hover::before {
-  background: url(/prev-active.c531ffbb.png);
+  background: url(/prev-active.f17d3799.svg);
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
@@ -93,7 +93,7 @@ body {
   display: inline-block;
   width: 40px;
   height: 16px;
-  background: url(/next.a23a11fb.png);
+  background: url(/next.9e04d121.svg);
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
@@ -101,7 +101,7 @@ body {
   transition: background 0.4s;
 }
 .slider__nav-next:hover::after {
-  background: url(/next-active.c7c5d4e3.png);
+  background: url(/next-active.8b581156.svg);
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
