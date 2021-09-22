@@ -1,4 +1,4 @@
-#JavaScript slider#
+# JavaScript slider #
 
 ### This is a simple slider that was built using: ###
 
