@@ -15,7 +15,7 @@ let interval = setInterval(() => {
   sliderLine.style.left = -offset + 'px';
 }, delay);
 
-document.querySelector('.slider__nav-prev')
+document.querySelector('.slider__nav-prev--active')
   .addEventListener('click', function () {
     offset -= imgWidth;
 
@@ -26,7 +26,7 @@ document.querySelector('.slider__nav-prev')
     sliderLine.style.left = -offset + 'px';
   });
 
-document.querySelector('.slider__nav-next')
+document.querySelector('.slider__nav-next--active')
   .addEventListener('click', function () {
     offset += imgWidth;
 
