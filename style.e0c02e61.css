@@ -1,21 +1,12 @@
 @font-face {
-  font-family: "OpensansCondensedBold-700";
+  font-family: "OpensansCondensedlLight-300";
   src: url("/OpensansCondensedBold-700.de92bde5.woff") format("woff");
-  font-weight: 700;
+  font-weight: 300;
   font-style: normal;
 }
-* {
-  box-sizing: border-box;
-}
-
 body {
-  background-color: #252525;
-}
-
-.container {
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 30px;
+  background-color: #333;
+  padding-top: 30px;
 }
 
 .slider {
@@ -46,7 +37,7 @@ body {
   padding-top: 35px;
 }
 .slider__nav {
-  font-family: "OpensansCondensedBold-700";
+  font-family: "OpensansCondensedlLight-300", sans-serif;
   font-size: 18px;
   letter-spacing: 0.1em;
   color: #c4c4c4;
@@ -55,14 +46,18 @@ body {
   outline: none;
   border: none;
 }
+.slider__nav-wrap {
+  position: relative;
+  width: 120px;
+  height: 30px;
+}
 .slider__nav:hover {
   cursor: pointer;
 }
 .slider__nav-prev {
   transition: color 0.4s;
-}
-.slider__nav-prev:hover {
-  color: #fff;
+  position: absolute;
+  left: 0;
 }
 .slider__nav-prev::before {
   content: "";
@@ -76,17 +71,31 @@ body {
   margin-right: 25px;
   transition: background 0.4s;
 }
-.slider__nav-prev:hover::before {
+.slider__nav-prev--active {
+  color: #fff;
+  position: absolute;
+  opacity: 0;
+  left: 0;
+  transition: opacity 0.4s;
+}
+.slider__nav-prev--active::before {
+  content: "";
+  display: inline-block;
+  width: 40px;
+  height: 16px;
   background: url(/prev-active.f17d3799.svg);
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
+  margin-right: 25px;
+}
+.slider__nav-prev--active:hover {
+  opacity: 100;
 }
 .slider__nav-next {
   transition: color 0.4s;
-}
-.slider__nav-next:hover {
-  color: #fff;
+  position: absolute;
+  right: 0;
 }
 .slider__nav-next::after {
   content: "";
@@ -100,11 +109,26 @@ body {
   margin-left: 25px;
   transition: background 0.4s;
 }
-.slider__nav-next:hover::after {
+.slider__nav-next--active {
+  color: #fff;
+  position: absolute;
+  right: 0;
+  opacity: 0;
+  transition: opacity 0.4s;
+}
+.slider__nav-next--active::after {
+  content: "";
+  display: inline-block;
+  width: 40px;
+  height: 16px;
   background: url(/next-active.8b581156.svg);
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
+  margin-left: 25px;
+}
+.slider__nav-next--active:hover {
+  opacity: 100;
 }
 
 /*# sourceMappingURL=/style.e0c02e61.css.map */
